@@ -1,11 +1,11 @@
 import './App.css';
-import { Routes, store } from '../config';
+import { AppRoutes, store } from '../config';
 import { Provider } from 'react-redux';
 
 function App() {
     return (
         <Provider store={store}>
-            <Routes />
+            <AppRoutes />
         </Provider>
     );
 }

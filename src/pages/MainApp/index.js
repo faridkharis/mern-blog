@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Footer, Header } from '../../components';
 import CreateBlog from '../CreateBlog';
 import DetailBlog from '../DetailBlog';
@@ -11,13 +11,11 @@ const MainApp = () => {
         <div className="main-app-wrapper">
             <Header />
             <div className="content-wrapper">
-                <Router>
-                    <Switch>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/create-blog" element={<CreateBlog />} />
-                        <Route path="/detail-blog/:id" element={<DetailBlog />} />
-                    </Switch>
-                </Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/create-blog" element={<CreateBlog />} />
+                    <Route path="/detail-blog/:id" element={<DetailBlog />} />
+                </Routes>
             </div>
             <Footer />
         </div>
