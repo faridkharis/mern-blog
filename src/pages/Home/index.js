@@ -5,12 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataBlog } from '../../config/redux/action';
 
-const Home = () => {
+function Home() {
     const [counter, setCounter] = useState(1);
     const { dataBlog, page } = useSelector(state => state.homeReducer);
     const dispatch = useDispatch();
-
-    console.log('page : ', page);
 
     useEffect(() => {
         dispatch(setDataBlog(counter))
@@ -20,12 +18,10 @@ const Home = () => {
 
     const previous = () => {
         setCounter(counter <= 1 ? 1 : counter - 1);
-        console.log('counter : ', counter);
     }
 
     const next = () => {
         setCounter(counter === page.totalPage ? page.totalPage : counter + 1);
-        console.log('counter : ', counter);
     }
     return (
         <div className="home-page-wrapper">

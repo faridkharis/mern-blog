@@ -3,8 +3,9 @@ import './blogItem.scss';
 import { Button, Gap } from '../../../components';
 import { useNavigate } from 'react-router-dom';
 
-const BlogItem = (props) => {
+function BlogItemComponent(props) {
     const navigate = useNavigate();
+
     const { image, title, name, date, body, _id } = props;
     return (
         <div className="blog-item">
@@ -20,4 +21,4 @@ const BlogItem = (props) => {
     )
 }
 
-export default BlogItem;
+export default BlogItemComponent;
