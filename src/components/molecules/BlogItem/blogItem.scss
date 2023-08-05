@@ -3,7 +3,7 @@
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: 5px 6px 14px rgba(0, 0, 0, 0.20);
+    box-shadow: 5px 6px 14px rgba(0, 0, 0, 0.2);
 
     .image-thumb {
         width: 100%;
@@ -13,6 +13,32 @@
 
     .content-detail {
         padding: 16px;
+        .title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .edit-wrapper {
+                display: flex;
+                align-items: center;
+
+                .edit {
+                    font-weight: bold;
+                    color: #03a9fa;
+                    cursor: pointer;
+                    margin: 0px;
+                    margin-right: 14px;
+                }
+
+                .delete {
+                    font-weight: bold;
+                    color: #e91e63;
+                    margin: 0px;
+                    margin-left: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
 
         .title {
             margin: 0px;
